@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-xl font-bold mb-4">Financial Visualizer</h1>
+        <div>
+            <h2 class="text-lg font-bold">Add Category</h2>
+            <form id="categoryForm">
+                <input type="text" id="categoryName" placeholder="Category Name" class="border p-2 mr-2">
+                <select id="categoryType" class="border p-2 mr-2">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <input type="number" id="categoryAmount" placeholder="Amount" class="border p-2 mr-2">
+                <button type="submit" class="bg-blue-500 text-white p-2">Add</button>
+				
+				<button id="submitData" class="bg-green-500 text-white p-2 mt-4">Submit</button>
+
+				<pre id="outputSyntax" class="mt-4 p-4 border rounded bg-gray-100">
+					<!-- Generated syntax will appear here -->
+				</pre>
+				<button id="copyButton">Copy to Clipboard</button>
+            </form>
+        </div>
+        <table id="categoriesTable" class="mt-4 w-full text-left">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2">Category</th>
+                    <th class="border px-4 py-2">Type</th>
+                    <th class="border px-4 py-2">Amount</th>
+                    <th class="border px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Categories will be listed here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
